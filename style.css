@@ -1,0 +1,44 @@
+*{
+	margin:0;
+	padding: 0;
+
+}
+body{
+	background:rgb(0,0,0);
+}
+.button{
+	width: 50px;
+	height: 50px;
+	font-size: 25px;
+	margin: 2px;
+	cursor: pointer;
+	background:rgb(32,32,32);
+	border: none;
+	color:white;
+}
+.textView{
+	width:223px;
+	margin: 5px;
+	font-size: 25px;
+	padding: 5;
+	color: #fff;
+	background:rgb(0,0,0);
+	border:rgb(32,32,32) 1px solid;
+}
+.main{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translateX(-50%) translateY(-50%);
+	background:;
+}
+.bg{
+	background:linear-gradient(to right,#e91e63,#3f51b5);
+	height: 100%
+}
+.container{
+	background:rgb(10,10,10);
+	border:rgb(32,32,32) 1px solid;
+	padding: 0;
+	color: rgb(10,10,10);
+}
