@@ -6,37 +6,66 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script >
+        //Insertion of operations and operands
 		function insert(num){
-			document.form.textView.value = document.form.textView.value+num;
+			form.textView.value =form.textView.value+num;
 		}
+        //to evaluate the inserted values
 		function equal(){
-			var exp=document.form.textView.value;
-			if(exp){
-			document.form.textView.value=eval(exp);
+			exp=form.textView.value;
+			form.textView.value=eval(exp);
 		}
-		}
+        //clear the display
 		function clean(){
-			document.form.textView.value="";
+			form.textView.value="";
 		}
+        //Removes the most recent added value in the display
 		function back(){
-			var exp = document.form.textView.value;
-			document.form.textView.value=exp.substring(0,exp.length-1);
+			exp = form.textView.value;
+			form.textView.value=exp.substring(0,exp.length-1);
 		}
+        function fact(num) { 
+            
+            /* Check if function include ! character then 
+            calculate factorial of number */ 
+            if(calc.display.value.includes("!")) { 
+                
+                exp=form.textView.value ; 
+                n = Number(form.textView.value.substring(0,exp.length-1)); 
+                f = 1; 
+                
+                for(i = 2; i <= n; i++) 
+                    f = f*i; 
+                 form.textView.value = f; 
+            } 
+            else if(form.textView.value.includes("%")) { 
+                
+                exp=form.textView.value; 
+                n = Number(form.textView.value.substring(0,exp.length-1)); 
+                form.textView.value = n/100; 
+            } 
+            else     
+                /* Otherwise evalute and execute output */ 
+                form.textView.value = eval(exp); 
+        } 
+
 	</script>
+     <script>
+      window.platform = 'www'
+    </script>
 </head>
-<body>
-    .<title></title>
+<body dcg-platform="www" data-user-info="{}">
     <div class="calculator">
         <div class="container">
+
             <div class="bg">
-            <div class="main">
-                <form name="form">
-                    <input type="text" class="textView" name="textView">
-                </form>
+            <div><!--enter 4th div name 'main'-->
+                <form name="form">  
                 <table>
-                    <tr>
+                     <input type="text" class="textView" name="textView"> 
+                    <tr >
                         <td><input class="button" type="button" onclick="clean()" value="C" name=""></td>
-                        <td><input class="button" type="button" onclick="back()" value="<" name=""></td>
+                        <td><input class="button" type="button" onclick="back()" value="DEL" name=""></td>
                         <td><input class="button" type="button" onclick="insert('/')" value="/" name=""></td>
                         <td><input class="button" type="button" onclick="insert('*')" value="x" name=""></td>
                     </tr>
@@ -56,16 +85,17 @@
                         <td><input class="button" type="button" onclick="insert(1)" value="1" name=""></td>
                         <td><input class="button" type="button" onclick="insert(2)" value="2" name=""></td>
                         <td><input class="button" type="button" onclick="insert(3)" value="3" name=""></td>
-                        <td rowspan="5"><input class="button" style="height: 106px" type="button" onclick="equal()" value="=" name=""></td>
+                        <td rowspan="2"><input class="button" style="height: 110px" type="button" onclick="equal()" value="=" name=""></td>
                         
                     </tr>
                     <tr>
-                        <td colspan="2"><input class="button" style="width: 106px" type="button" onclick="insert(0)" value="0" name=""></td>
+                        <td><input class="button" type="button" onclick="insert(0)" value="0" name=""></td>
                         <td><input class="button" type="button" onclick="insert('.')" value="." name=""></td>
-                        
+                        <td><input class="button" type="button" onclick="fact(  )" value="x!" name=""></td>
                     </tr>
                     
                     </table>
+                    </form>
             </div>
         </div>	
         </div>

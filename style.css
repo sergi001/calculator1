@@ -1,10 +1,41 @@
 *{
+	width: 100;
+	height: 200;
 	margin:0;
 	padding: 0;
 
 }
+input[type=button] {
+	float: center;
+	padding: 0;
+	margin: 5px;
+	box-sizing: border-box;
+	background: #ecedef;
+	font-size: 30px;
+	line-height: 30px;
+	border-radius: 20%;
+	font-weight: 700;
+	color:#1180F0;
+}
+input[type=text] {
+	width: 250px;
+	height: 60px;
+	float:center ;
+	padding: 0;
+	border: outset;
+	color: #ffffff;
+	text-align: right;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 60px;
+	
+}
 body{
-	background:rgb(0,0,0);
+	background-color:#848484;
+}
+.table{
+	width: 20px;
+	height: 10px;
 }
 .button{
 	width: 50px;
@@ -14,31 +45,40 @@ body{
 	cursor: pointer;
 	background:rgb(32,32,32);
 	border: none;
-	color:white;
+	color:rgb(0,0,0);
 }
 .textView{
-	width:223px;
-	margin: 5px;
-	font-size: 25px;
-	padding: 5;
-	color: #fff;
-	background:rgb(0,0,0);
-	border:rgb(32,32,32) 1px solid;
+	width:220px;
+	height: 50px;
+	margin:2px;
+	font-size: 50px;
+	padding:5;
+	color: #ffffff;
+	background: #FF0509;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 1px;
 }
+/* //add in index.html class 'main'in the file as the 4th div//
 .main{
 	position: absolute;
-	top:50%;
+	top:30%;
 	left:50%;
 	transform: translateX(-50%) translateY(-50%);
-	background:;
+	
 }
+*/
 .bg{
-	background:linear-gradient(to right,#e91e63,#3f51b5);
-	height: 100%
+	background-color:#7D7F82;
+	border-color: 0D0C0C;
+
+
 }
 .container{
+	height: 300px;
+	width: 270px;
 	background:rgb(10,10,10);
-	border:rgb(32,32,32) 1px solid;
+	border:outset;
 	padding: 0;
 	color: rgb(10,10,10);
+	border: inset;
 }
